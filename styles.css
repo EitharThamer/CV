@@ -1,0 +1,116 @@
+/* إعداد الخط العام */
+body {
+  font-family: 'Tajawal', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+  line-height: 1.6;
+}
+
+/* الوضع النهاري */
+body.light-mode {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+/* الوضع الليلي */
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+/* حاوية مركزية */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* زر الوضع الليلي */
+#mode-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* رأس الصفحة */
+header {
+  background: linear-gradient(to left, #a855f7, #ec4899);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* الأقسام */
+section {
+  padding: 20px;
+  margin: 10px auto;
+  border-bottom: 1px solid #ccc;
+  max-width: 900px;
+}
+
+section h2 {
+  color: #6d28d9;
+}
+
+/* المهارات */
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.skills li {
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* المهارات - الوضع النهاري */
+body.light-mode .skills li {
+  background-color: #e0f0ff;
+  color: #222;
+}
+
+/* المهارات - الوضع الليلي */
+body.dark-mode .skills li {
+  background-color: #333;
+  color: #fff;
+}
+
+/* الروابط */
+a {
+  color: #0077ff;
+  text-decoration: none;
+}
+
+/* الروابط في الوضع الليلي */
+body.dark-mode a {
+  color: #60a5fa;
+}
+
+/* الجوال */
+@media (max-width: 768px) {
+  header {
+    padding: 30px 10px;
+  }
+
+  .skills ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #mode-toggle {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
